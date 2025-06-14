@@ -39,9 +39,8 @@
 
 // export default Home;
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BookOpen, Users, Award, ArrowRight, Play, Star, ChevronDown, Zap, Target, Globe } from "lucide-react";
-
 // Mock TextPressure component with enhanced styling
 const TextPressure = () => {
   const [currentText, setCurrentText] = useState(0);
@@ -126,6 +125,39 @@ const CourseCard = ({ title, description, image, rating, students, duration }) =
 );
 
 function Home() {
+
+  const courses = [
+  {
+    title: "AI & Machine Learning",
+    desc: "Master the fundamentals of artificial intelligence and build real-world applications that solve complex problems.",
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop"
+  },
+  {
+    title: "Full Stack Development",
+    desc: "Build modern web applications from scratch using the latest technologies and industry best practices.",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop"
+  },
+  {
+    title: "Data Science Mastery",
+    desc: "Analyze complex datasets and extract meaningful insights using Python, R, and advanced statistical methods.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop"
+  },
+  {
+    title: "UI/UX Design Essentials",
+    desc: "Design intuitive user interfaces and delightful user experiences with hands-on projects.",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=200&fit=crop"
+  },
+];
+const carousel = useRef(null);
+
+  // Carousel scroll logic
+  const scrollTo = (idx) => {
+    if (carousel.current) {
+      const child = carousel.current.children[idx];
+      child.scrollIntoView({ behavior: "smooth", inline: "center" });
+    }
+  };
+
 
   return (
     <>
@@ -219,7 +251,7 @@ function Home() {
         />
         
         {/* Content */}
-        <div className="relative z-10 flex items-center justify-center h-full px-4">
+        {/* <div className="relative z-10 flex items-center justify-center h-full px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-6xl md:text-7xl font-black text-white mb-8">
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">Courses</span>
@@ -228,7 +260,57 @@ function Home() {
               Handpicked courses that will transform your career
             </p>
           </div>
+        </div> */}
+        <section className="relative h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex flex-col justify-center items-center px-4">
+      <div className="text-center max-w-4xl mx-auto mb-12">
+        <h2 className="text-6xl md:text-7xl font-black text-white mb-8">
+          Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">Courses</span>
+        </h2>
+        <p className="text-2xl text-white/80 mb-12">
+          Handpicked courses that will transform your career
+        </p>
+      </div>
+
+      {/* Carousel */}
+      <div className="relative w-full max-w-4xl">
+        <div className="flex items-center justify-center space-x-2 mb-6">
+          {courses.map((_, idx) => (
+            <button
+              key={idx}
+              className="w-3 h-3 rounded-full bg-white/50 hover:bg-yellow-400 transition"
+              onClick={() => scrollTo(idx)}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
         </div>
+        <div
+          ref={carousel}
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-8"
+          style={{ scrollSnapType: "x mandatory" }}
+        >
+          {courses.map((course, idx) => (
+            <div
+              key={idx}
+              className="min-w-[320px] max-w-sm bg-white rounded-3xl overflow-hidden shadow-2xl snap-center flex-shrink-0"
+            >
+              <img
+                src={course.image}
+                alt={course.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-3">{course.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{course.desc}</p>
+                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-2xl font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105">
+                  Start Learning
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+        
       </div>
 
       {/* Courses Section */}
@@ -278,6 +360,11 @@ function Home() {
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
+          {/* <MetallicPaint 
+              imageData={imageData ?? new ImageData(1, 1)} 
+              params={{ edge: 2, patternBlur: 0.005, patternScale: 2, refraction: 0.015, speed: 0.3, liquid: 0.07 }} 
+            /> */}
+
           <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
             Ready to Transform Your Future?
           </h2>
