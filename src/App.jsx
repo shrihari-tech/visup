@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import SplashCursor from './BlitsBlocks/SplashCursor/SplashCursor'
-import HeroSection from "./Components/HeroSection";
-import FeaturesSection from "./Components/FeaturesSection";
-import FeaturedCoursesSection from "./Components/FeaturedCoursesSection";
-import CoursesSection from "./Components/CoursesSection";
-import CallToActionSection from "./Components/CallToActionSection";
+import HeroSection from "./components/HeroSection";
+import FeaturesSection from "./components/FeaturesSection";
+import FeaturedCoursesSection from "./components/FeaturedCoursesSection";
+import CoursesSection from "./components/CoursesSection";
+import CallToActionSection from "./components/CallToActionSection";
 function App() {
   const [count, setCount] = useState(0)
 
