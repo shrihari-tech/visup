@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import TextPressure from "./TextPressure";
 
 const HeroSection = () => (
-  <div className="relative h-screen overflow-hidden">
+  <div className="relative h-screen overflow-hidden" id="home">
     {/* Animated Background */}
     <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900" />
     

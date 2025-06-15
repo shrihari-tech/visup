@@ -4,14 +4,14 @@ import FloatingCard from "./FloatingCard";
 import StatCard from "./StatCard";
 
 const FeaturesSection = () => (
-  <div className="py-32 bg-gradient-to-b from-gray-50 to-white">
+  <div className="py-32 bg-gradient-to-b from-gray-50 to-white" id="whyus">
     <div className="max-w-7xl mx-auto px-4">
       <div className="text-center mb-20">
         <h2 className="text-5xl md:text-6xl font-black text-gray-800 mb-6">
           Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">EduVerse</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Experience the future of education with our revolutionary platform that adapts to your learning style
+          At Vinsup Skill Academy, we bridge the gap between learning and employment. Our industry-focused curriculum, hands-on training, and expert guidance make us the ideal choice for students ready to step into the tech world. With 100 hours of focused learning, placement support, and a strong community, we’re committed to helping you succeed.
         </p>
       </div>
 

@@ -19,9 +19,10 @@ const Navbar = () => {
       <div className="hidden md:flex flex-1 justify-center">
         <ul className="flex space-x-8 text-black">
           <li className="hover:text-blue-500 cursor-pointer"><a href="#home">Home</a></li>
-          <li className="hover:text-blue-500 cursor-pointer"><a href="#services">Services</a></li>
-          <li className="hover:text-blue-500 cursor-pointer"><a href="#pricing">Pricing</a></li>
           <li className="hover:text-blue-500 cursor-pointer"><a href="#whyus">Why Us</a></li>
+          <li className="hover:text-blue-500 cursor-pointer"><a href="#services">Services</a></li>
+          <li className="hover:text-blue-500 cursor-pointer"><a href="#courses">Courses</a></li>
+          <li className="hover:text-blue-500 cursor-pointer"><a href="#process">Process</a></li>
         </ul>
       </div>
 
