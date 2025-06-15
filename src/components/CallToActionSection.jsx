@@ -41,7 +41,7 @@ const CallToActionSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const selectedProject = {
-    title: "VINSUp Skill Academy",
+    title: "VINSUP Skill Academy",
     details: [
       { id: 1, title: "", image: "./gallery/IMG_1014.PNG" },
       { id: 2, title: "", image: "./gallery/IMG_0108.JPG" },
@@ -91,7 +91,7 @@ const CallToActionSection = () => {
           >
             Take a Look
           </button>
-          <a className="border-2 border-white/30 cursor-pointer text-white px-12 py-6 rounded-full text-xl font-bold hover:bg-white/10 transition-all duration-300 hover:scale-105 backdrop-blur-sm" href="#footer" >
+          <a className="border-2 border-white/30 cursor-pointer text-white px-12 py-6 rounded-full text-xl font-bold hover:bg-white/10 transition-all duration-300 hover:scale-105 backdrop-blur-sm" href="https://forms.gle/FfRLCBQn7a2SkfHx5" target="_blank" >
             Contact Us
           </a>
         </div>
