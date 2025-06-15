@@ -20,16 +20,24 @@ const HeroSection = () => (
       <div className="text-center max-w-6xl mx-auto">
         <TextPressure />
         <p className="text-xl md:text-2xl text-white/80 mt-8 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Unlock your potential with cutting-edge courses designed by industry experts. 
-          Transform your career with personalized learning experiences.
+          Kickstart your career with our industry-ready professional course — perfect for students seeking hands-on skills and a direct path to job opportunities in tech.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-full text-lg font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 shadow-2xl">
+          <a className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-full text-lg font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 shadow-2xl" href="#whyus">
             Start Your Journey
-          </button>
-          <button className="border-2 border-white/30 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+          </a>
+          {/* <button className="border-2 border-white/30 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition-all duration-300 hover:scale-105 backdrop-blur-sm" href="https://www.youtube.com/watch?v=Y7f98aduVJ8" target="_blank">
             Watch Demo
-          </button>
+          </button> */}
+          <a
+            href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-white/30 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+          >
+            Watch Demo
+          </a>
+
         </div>
       </div>
     </div>
