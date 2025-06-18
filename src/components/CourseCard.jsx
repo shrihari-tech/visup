@@ -27,7 +27,7 @@ const CourseCard = ({ title, description, image, rating, students, duration }) =
       </div>
       <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-2xl font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 flex items-center justify-center">
         <Play className="w-5 h-5 mr-2" />
-        Start Learning
+          Road Map
       </button>
     </div>
   </div>

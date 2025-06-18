@@ -146,7 +146,7 @@ const CoursesSection = () => {
     <div className="py-32 bg-gradient-to-b from-white to-gray-50" id="courses">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-black text-gray-800 mb-6">
-          Our Launched{" "}
+          100 Hr's{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
             Course
           </span>

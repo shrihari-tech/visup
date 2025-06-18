@@ -5,12 +5,12 @@ import { Carousel } from "antd";
 const courses = [
   {
     title: "Graphic Designer / UI/UX Designer",
-    desc: "Creative and detail-oriented designer skilled in crafting visually appealing graphics and intuitive user interfaces. Specializes in turning complex ideas into engaging digital experiences that enhance user satisfaction and brand identity.",
+    desc: "Creative and detail-oriented designer skilled in crafting visually appealing graphics and intuitive user interfaces.",
     image: "/nocode.png"
   },
   {
     title: "Digital Marketing Specialist",
-    desc: "Strategic and data-driven digital marketer with expertise in SEO, social media, and paid campaigns. Focuses on increasing online visibility, driving traffic, and improving customer engagement through targeted digital efforts",
+    desc: "Strategic and data-driven digital marketer with expertise in SEO, social media, and paid campaigns.",
     image: "/nocode.png"
   },
   {
@@ -34,65 +34,65 @@ const courses = [
     image: "/lowcode.png"
   },
   {
-    title: "MERN Full Stack Developer",
-    desc: "Build scalable and dynamic web applications using MongoDB, Express.js, React.js, and Node.js. Gain hands-on experience in full-stack development, RESTful APIs, JWT authentication, and responsive UI design using React.",
+    title: "MERN Full Stack Development",
+    desc: "Build scalable and dynamic web applications using MongoDB, Express.js, React.js, and Node.js.",
     image: "/code.png"
   },
   {
-    title: "Java Full Stack Developer",
-    desc: "Master backend development with Java (Spring Boot) and frontend integration using Angular or React. Learn to build secure, high-performance applications using MVC architecture, REST APIs, and modern DevOps practices.",
+    title: "Java Full Stack Development",
+    desc: "Master backend development with Java (Spring Boot) and frontend integration using Angular or React.",
     image: "/code.png"
   },
   {
-    title: "PHP & Laravel Full Stack Developer",
-    desc: "Develop robust web applications using PHP with the Laravel framework. Focus on MVC architecture, Eloquent ORM, route management, authentication, and building APIs with real-world project implementation.",
+    title: "PHP & Laravel Full Stack Development",
+    desc: "Develop robust web applications using PHP with the Laravel framework.",
     image: "/code.png"
   },
   {
-    title: "Flutter & Firebase Full Stack Developer",
-    desc: "Design and develop cross-platform mobile applications with Flutter. Leverage Firebase for authentication, real-time database, cloud functions, and push notifications — all in one mobile-first development experience.",
+    title: "Flutter & Firebase Full Stack Development",
+    desc: "Design and develop cross-platform mobile applications with Flutter.",
     image: "/code.png"
   },
   {
     title: "Data Science",
-    desc: "Dive into data analytics, machine learning, and AI using Python, Pandas, Scikit-learn, and visualization libraries. Learn how to process, analyze, and model data to solve real-world problems using statistical and computational techniques.",
+    desc: "Dive into data analytics, machine learning, and AI using Python, Pandas, Scikit-learn, and visualization libraries.",
     image: "/code.png"
   },
-  {
-    title: "C & C++",
-    desc: "Master the foundational programming languages that form the backbone of software development. Learn syntax, memory management, pointers, and object-oriented concepts to build efficient and structured programs.",
-    image: "/crt.png"
-  },
-  {
-    title: "MERN Full Stack Developer",
-    desc: "Master the foundational programming languages that form the backbone of software development. Learn syntax, memory management, pointers, and object-oriented concepts to build efficient and structured programs",
-    image: "/crt.png"
-  },
-  {
-    title: "Java",
-    desc: "Understand core and advanced Java concepts, including OOPs, exception handling, multithreading, and collections. Develop platform-independent applications and prepare for technical interviews and coding assessments.",
-    image: "/crt.png"
-  },
-  {
-    title: "Python",
-    desc: "Learn Python from basics to advanced, focusing on clean syntax, data types, control flow, and functions. Ideal for automation, scripting, and problem-solving in coding rounds or technical evaluations.",
-    image: "/crt.png"
-  },
-  {
-    title: "Data Structures & Algorithms",
-    desc: "Develop strong problem-solving skills by mastering arrays, linked lists, stacks, queues, trees, graphs, sorting, and searching algorithms. Essential for acing competitive programming and coding interviews.",
-    image: "/crt.png"
-  },
-  {
-    title: "Networking",
-    desc: "Gain clarity on networking fundamentals like OSI model, TCP/IP, IP addressing, routing, and protocols. Understand how data travels across networks—vital for system design and tech role discussions.",
-    image: "/crt.png"
-  },
-  {
-    title: "Database (SQL, MySQL)",
-    desc: "Learn to design, query, and manage relational databases. Focus on SQL syntax, normalization, joins, indexing, and practical use cases in MySQL to support backend and data-driven applications.",
-    image: "/crt.png"
-  }
+  // {
+  //   title: "C & C++",
+  //   desc: "Master the foundational programming languages that form the backbone of software development.",
+  //   image: "/crt.png"
+  // },
+  // {
+  //   title: "MERN Full Stack Development",
+  //   desc: "Master the foundational programming languages that form the backbone of software development.",
+  //   image: "/crt.png"
+  // },
+  // {
+  //   title: "Java",
+  //   desc: "Understand core and advanced Java concepts, including OOPs, exception handling, multithreading, and collections.",
+  //   image: "/crt.png"
+  // },
+  // {
+  //   title: "Python",
+  //   desc: "Learn Python from basics to advanced, focusing on clean syntax, data types, control flow, and functions.",
+  //   image: "/crt.png"
+  // },
+  // {
+  //   title: "Data Structures & Algorithms",
+  //   desc: "Develop strong problem-solving skills by mastering arrays, linked lists, stacks, queues, trees, graphs, sorting, and searching algorithms.",
+  //   image: "/crt.png"
+  // },
+  // {
+  //   title: "Networking",
+  //   desc: "Gain clarity on networking fundamentals like OSI model, TCP/IP, IP addressing, routing, and protocols.",
+  //   image: "/crt.png"
+  // },
+  // {
+  //   title: "Database (SQL, MySQL)",
+  //   desc: "Focus on SQL syntax, normalization, joins, indexing, and practical use cases in MySQL to support backend and data-driven applications.",
+  //   image: "/crt.png"
+  // }
 ];
 
 // Optional: Tailwind classes for carousel content
@@ -126,7 +126,7 @@ const FeaturedCoursesSection = () => (
               <div className="p-8 flex flex-col flex-1 w-full">
                 <h3 className={titleClass}>{course.title}</h3>
                 <p className={descClass}>{course.desc}</p>
-                <button className={buttonClass}>Start Learning</button>
+                <button className={buttonClass}>Road Map</button>
               </div>
             </div>
           </div>
