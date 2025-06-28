@@ -2,7 +2,7 @@ import React from "react";
 import { BookOpen, Users, Award, Zap, Target, Globe } from "lucide-react";
 import FloatingCard from "./FloatingCard";
 import StatCard from "./StatCard";
-
+import LandingPage from "./LandingPage";
 const FeaturesSection = () => (
   <div className="py-32 bg-gradient-to-b from-gray-50 to-white" id="whyus">
     <div className="max-w-7xl mx-auto px-4">

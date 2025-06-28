@@ -1,44 +1,3 @@
-// import React from "react";
-// import TextPressure from "../BlitsBlocks/TextPressure/TextPressure";
-// function Home() {
-//   return (
-//     <>
-//       {/* Parallax Section 1 */}
-//       <div
-//         className="h-screen bg-center bg-cover bg-fixed"
-//         style={{ backgroundImage: "url('https://source.unsplash.com/random/1600x900?nature')" }}
-//       >
-//         <div className="flex items-center justify-center h-full bg-black bg-opacity-50">
-//           {/* <h1 className="text-white text-5xl font-bold"><TextPressure/></h1> */}
-//           <TextPressure/>
-//         </div>
-//       </div>
-
-//       {/* Regular Content */}
-//       <div className="h-screen flex items-center justify-center bg-white">
-//         <p className="text-3xl text-gray-800">Scroll down for more...</p>
-//       </div>
-
-//       {/* Parallax Section 2 */}
-//       <div
-//         className="h-screen bg-center bg-cover bg-fixed"
-//         style={{ backgroundImage: "url('https://source.unsplash.com/random/1600x900?mountains')" }}
-//       >
-//         <div className="flex items-center justify-center h-full bg-black bg-opacity-50">
-//           <h2 className="text-white text-4xl font-semibold">Another Parallax Section</h2>
-//         </div>
-//       </div>
-
-//       {/* More Content */}
-//       <div className="h-screen flex items-center justify-center bg-gray-100">
-//         <p className="text-3xl text-gray-700">Tailwind + Parallax = ❤️</p>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Home;
-
 import React, { useState, useEffect, useRef } from "react";
 import { BookOpen, Users, Award, ArrowRight, Play, Star, ChevronDown, Zap, Target, Globe } from "lucide-react";
 // Mock TextPressure component with enhanced styling
@@ -180,6 +139,7 @@ const carousel = useRef(null);
         <div className="relative z-10 flex items-center justify-center h-full px-4">
           <div className="text-center max-w-6xl mx-auto">
             <TextPressure />
+
             <p className="text-xl md:text-2xl text-white/80 mt-8 mb-12 max-w-3xl mx-auto leading-relaxed">
               Unlock your potential with cutting-edge courses designed by industry experts. 
               Transform your career with personalized learning experiences.

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 import SplashCursor from './BlitsBlocks/SplashCursor/SplashCursor'
 import HeroSection from "./components/HeroSection";
 import FeaturesSection from "./components/FeaturesSection";
@@ -8,6 +8,7 @@ import CoursesSection from "./components/CoursesSection";
 import CallToActionSection from "./components/CallToActionSection";
 import WorkProcessSection from "./components/WorkProcessSection";
 import Footer from "./components/Footer";
+import LandingPage from "./components/LandingPage";
 function App() {
   const [frontendLoaded, setFrontendLoaded] = useState(false);
 
