@@ -162,7 +162,7 @@ const CustomCarousel = ({ images, autoplay = true, autoplayInterval = 3000 }) =>
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-2 h-2 rounded-full transition-all duration-200 ${
-              index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-50'
+              index === currentSlide ? 'bg-gray-700' : 'bg-white bg-opacity-50'
             }`}
           />
         ))}

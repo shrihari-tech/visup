@@ -126,7 +126,7 @@ const FeaturedCoursesSection = () => (
               <div className="p-8 flex flex-col flex-1 w-full">
                 <h3 className={titleClass}>{course.title}</h3>
                 <p className={descClass}>{course.desc}</p>
-                <button className={buttonClass}>Road Map</button>
+                {/* <button className={buttonClass}>Road Map</button> */}
               </div>
             </div>
           </div>
