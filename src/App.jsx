@@ -9,6 +9,7 @@ import CallToActionSection from "./components/CallToActionSection";
 import WorkProcessSection from "./components/WorkProcessSection";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
+import WhatsAppChat from "./components/WhatsAppChat";
 function App() {
   const [frontendLoaded, setFrontendLoaded] = useState(false);
 
@@ -42,6 +43,7 @@ function App() {
       <CallToActionSection />
       <WorkProcessSection />
       <Footer/>
+      <WhatsAppChat />
     </>
   )
 }
