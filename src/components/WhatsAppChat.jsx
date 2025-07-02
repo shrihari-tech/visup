@@ -1,8 +1,7 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import dotenv from "dotenv";
-dotenv.config();
-const phoneNumber = process.env.WHATSAPP;
+
+const phoneNumber = "8870060607"
 const message = encodeURIComponent("Hello! I have a question about your courses.");
 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
