@@ -127,7 +127,7 @@ const CustomCarousel = ({ images, autoplay = true, autoplayInterval = 3000 }) =>
     // </div>
     <div className="relative w-full h-80 md:h-96 overflow-hidden rounded-lg shadow-lg">
       <div 
-        className="flex transition-transform duration-500 ease-in-out h-full"
+        className="flex mt-24 transition-transform duration-500 ease-in-out h-full"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {images.map((image) => (

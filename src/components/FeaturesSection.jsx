@@ -38,9 +38,9 @@ const FeaturesSection = () => (
 
       {/* Stats Section */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-white rounded-3xl shadow-2xl p-12">
-        <StatCard number="50K+" label="Students" icon={Users} />
-        <StatCard number="500+" label="Courses" icon={BookOpen} />
-        <StatCard number="98%" label="Success Rate" icon={Award} />
+        <StatCard number="15K+" label="Students" icon={Users} />
+        <StatCard number="50+" label="Courses" icon={BookOpen} />
+        <StatCard number="100%" label="Pratical Experience and Live Products" icon={Award} />
         <StatCard number="24/7" label="Support" icon={Zap} />
       </div>
     </div>

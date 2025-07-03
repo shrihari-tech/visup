@@ -349,7 +349,7 @@ const Navbar = () => {
           <img src="./logo.png" alt="vinsup skill accademy" className="h-25 w-44"/>
         </div>
         <div className="hidden md:flex flex-1 justify-center">
-          <ul className="flex space-x-8 text-black">
+          <ul className="flex space-x-8 font-medium text-xl text-black">
             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
               <button onClick={() => handleNavClick('#home')}>Home</button>
             </li>
@@ -377,17 +377,17 @@ const Navbar = () => {
           </button>
         </div>
         <div className="hidden md:block">
-          <button
+          {/* <button
             onClick={toggleModal}
             className="border border-gray-400 text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition duration-200"
           >
             Get Brochure
-          </button>
+          </button> */}
         </div>
       </nav>
       {isOpen && (
         <div className="fixed top-16 left-0 right-0 bg-white bg-opacity-95 backdrop-blur-md text-black w-full z-40 shadow-lg border-t border-gray-200">
-          <ul className="flex flex-col items-center space-y-4 p-4">
+          <ul className="flex flex-col font-medium text-xl items-center space-y-4 p-4">
             <li>
               <button onClick={() => handleNavClick('#home')} className="hover:text-blue-500 transition-colors duration-200">Home</button>
             </li>
@@ -404,7 +404,7 @@ const Navbar = () => {
               <button onClick={() => handleNavClick('#process')} className="hover:text-blue-500 transition-colors duration-200">Process</button>
             </li>
             <li>
-              <button
+              {/* <button
                 onClick={() => {
                   toggleModal();
                   setIsOpen(false);
@@ -412,7 +412,7 @@ const Navbar = () => {
                 className="mt-2 w-full max-w-xs border border-gray-400 text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition duration-200"
               >
                 Get Brochure
-              </button>
+              </button> */}
             </li>
           </ul>
         </div>

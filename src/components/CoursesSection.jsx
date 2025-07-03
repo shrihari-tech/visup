@@ -423,16 +423,16 @@ const CoursesSection = () => {
   const courses = [
     {
       title: "Frontend Developer-React",
-      description: "This course is designed to equip you with the essential skills required to build modern, responsive, and user-friendly websites and web applications...",
+      description: "This course is designed to equip you with the essential skills required to build modern, responsive, and user-friendly websites...",
       image: "/frontend.png",
       rating: "4.9",
       students: "12,450",
       duration: "100 hours",
-      courseData: {
+      courseData: { 
         title: "Front End Development - React",
         duration: "100 hours",
         lectures: "35",
-        students: "500+",
+        students: "1500+",
         learningOutcomes: [
           "HTML5 & CSS3 - Understand the structure of web pages using semantic HTML tags",
           "Style web pages using CSS, including advanced topics like Flexbox and Grid Layouts",
@@ -454,7 +454,8 @@ const CoursesSection = () => {
             topics: [
               "Understand the structure of web pages using semantic HTML tags",
               "Style web pages using CSS, including advanced topics like Flexbox and Grid Layouts",
-              "Create responsive designs with media queries for different devices"
+              "Create responsive designs with media queries for different devices",
+
             ]
           },
           {
@@ -704,7 +705,7 @@ const CoursesSection = () => {
     },
     {
       title: "PHP & Laravel Development",
-      description: "This course is crafted for aspiring web developers who want to master backend development using PHP and the Laravel framework...",
+      description: "This course is crafted for aspiring web developers who want to master backend development using PHP...",
       image: "/php.png",
       rating: "4.9",
       students: "11,300",
@@ -766,9 +767,9 @@ const CoursesSection = () => {
     <div className="py-32 bg-gradient-to-b from-white to-gray-50" id="courses">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-black text-gray-800 mb-6">
-          100 Hr's{" "}
+          100 Hr's to Get your {" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-            Course
+            Entry Level JOB'S
           </span>
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

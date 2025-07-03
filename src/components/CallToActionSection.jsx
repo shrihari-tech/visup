@@ -7,12 +7,16 @@ const CallToActionSection = () => {
   const selectedProject = {
     title: "VINSUP Skill Academy",
     details: [
-      { id: 1, title: "", image: "./gallery/IMG_1014.PNG" },
-      { id: 2, title: "", image: "./gallery/IMG_0108.JPG" },
-      { id: 3, title: "", image: "./gallery/IMG_0094.JPG" },
-      { id: 4, title: "", image: "./gallery/IMG_0022.JPG" },
-      { id: 5, title: "", image: "./gallery/st.jpg" },
-      { id: 6, title: "", image: "./gallery/IMG_0069.JPG" },
+      { id: 1, title: "", image: "./gallery/img1.jpg" },
+      { id: 2, title: "", image: "./gallery/img2.jpeg" },
+      { id: 3, title: "", image: "./gallery/img3.JPG" },
+      { id: 4, title: "", image: "./gallery/img4.JPG" },
+      { id: 5, title: "", image: "./gallery/img5.JPG" },
+      { id: 6, title: "", image: "./gallery/img6.JPG" },
+      { id: 7, title: "", image: "./gallery/img7.JPG" },
+      { id: 8, title: "", image: "./gallery/img8.PNG" },
+      { id: 9, title: "", image: "./gallery/img9.JPG" },
+      { id: 10, title: "", image: "./gallery/IMG_0022.JPG"},
     ]
   };
 
@@ -72,7 +76,7 @@ const CallToActionSection = () => {
             key="close"
             type="primary"
             onClick={handleOk}
-            style={{ backgroundImage: "linear-gradient(to right, #f97316, #f59e0b)", cursor: "pointer" }}
+            style={{ backgroundImage: "linear-gradient(to right, #805ad5, #D81B60)", cursor: "pointer" }}
 
           >
             Close
@@ -87,9 +91,9 @@ const CallToActionSection = () => {
                 alt={detail.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4">
+              {/* <div className="p-4">
                 <h3 className="text-lg font-semibold">{detail.title}</h3>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
