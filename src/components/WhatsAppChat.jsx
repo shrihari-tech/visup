@@ -37,10 +37,10 @@
 
 import React from "react";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
-
+const whatsappNumber = "+918925876525";
 const phoneNumber = "+918870060607 "; // fallback if env missing
 const message = encodeURIComponent("Hello! I have a question about your courses.");
-const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 const callUrl = `tel:${phoneNumber}`;
 
 const baseStyle = {

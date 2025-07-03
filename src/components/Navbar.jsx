@@ -323,12 +323,16 @@
 // export default Navbar;
 
 import React, { useState } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
+// import workerSrc from 'pdfjs-dist/build/pdf.worker.entry';
 
+pdfjs.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleModal = () => setShowModal(!showModal);
+  const brouchreUrl = "/broucher.pdf";
 
   const handleNavClick = (href) => {
     setIsOpen(false);
@@ -424,13 +428,17 @@ const Navbar = () => {
               ✕
             </button>
             <div className="w-full h-full border border-gray-200 rounded bg-gray-50 flex items-center justify-center">
-              {brochureUrl ? (
-                // Show brochure PDF
-                <embed
-                  src={brochureUrl}
-                  type="application/pdf"
-                  className="w-full h-full rounded"
-                  />
+              {brouchreUrl ? (
+                //Show brochure PDF
+                // <embed
+                //   src={brouchreUrl}
+                //   type="application/pdf"
+                //   className="w-full h-full rounded"
+                //   />
+                <Document file={brouchreUrl}>
+                  <Page pageNumber={1} width={600} />
+                </Document>
+
               ) : (
                 // Show "No brochure" message
                 <div className="text-center text-gray-600">
