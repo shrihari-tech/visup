@@ -255,7 +255,7 @@ const HeroSection = () => (
               Start Your Journey
             </a>
             <a
-              href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+              href="https://www.instagram.com/reel/DJ4ESRPIk83/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-white/30 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition-all duration-300 hover:scale-105 backdrop-blur-sm"

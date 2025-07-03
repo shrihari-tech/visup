@@ -40,11 +40,11 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Youtube, href: "#", label: "YouTube" }
+    { icon: Facebook, href: "https://www.facebook.com/Vinsupskillacademy/", label: "Facebook" },
+    // { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "https://www.instagram.com/vinsupskillacademy/?igsh=a2hsbTEwNXJ6NWZz#", label: "Instagram" },
+    // { icon: Linkedin, href: "#", label: "LinkedIn" },
+    // { icon: Youtube, href: "#", label: "YouTube" }
   ];
 
   return (
@@ -67,13 +67,13 @@ const Footer = () => {
                     <BookOpen className="w-6 h-6 text-white" />
                   </div>
                   <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    EduMaster
+                    Vinsup Info Tech
                   </span>
                 </div>
                 <p className="text-white/70 mb-6 leading-relaxed">
                   Empowering learners worldwide with cutting-edge education and personalized learning experiences. Join thousands who've transformed their careers with us.
                 </p>
-                <div className="space-y-4">
+                {/* <div className="space-y-4">
                   <h4 className="font-semibold text-white">Stay Updated</h4>
                   <div className="flex">
                     <input
@@ -85,6 +85,20 @@ const Footer = () => {
                       <ArrowRight className="w-5 h-5" />
                     </button>
                   </div>
+                </div> */}
+                <h4 className="font-semibold text-white mb-4">Follow Us</h4>
+                <div className="flex space-x-3">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      aria-label={social.label}
+                      className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-110 hover:shadow-lg backdrop-blur-sm"
+                      target="_blank"
+                    >
+                      <social.icon className="w-5 h-5" />
+                    </a>
+                  ))}
                 </div>
               </div>
 
@@ -147,7 +161,7 @@ const Footer = () => {
                 </div>
 
                 {/* Social Links */}
-                <h4 className="font-semibold text-white mb-4">Follow Us</h4>
+                {/* <h4 className="font-semibold text-white mb-4">Follow Us</h4>
                 <div className="flex space-x-3">
                   {socialLinks.map((social, index) => (
                     <a
@@ -155,11 +169,12 @@ const Footer = () => {
                       href={social.href}
                       aria-label={social.label}
                       className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-110 hover:shadow-lg backdrop-blur-sm"
+                      target="_blank"
                     >
                       <social.icon className="w-5 h-5" />
                     </a>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -170,7 +185,7 @@ const Footer = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <div className="text-white/60 text-sm">
-                © {currentYear} EduMaster. All rights reserved. Transforming education, one student at a time.
+               <a href="https://vinsupinfotech.com/" target="_blank"> Vinsup Info Tech (P) Ltd </a>. © {currentYear} | All rights reserved.
               </div>
               <div className="flex items-center space-x-6 text-sm">
                 <a href="#" className="text-white/60 hover:text-white transition-colors duration-300">
