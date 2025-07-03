@@ -8,7 +8,7 @@ const FeaturesSection = () => (
     <div className="max-w-7xl mx-auto px-4">
       <div className="text-center mb-20">
         <h2 className="text-5xl md:text-6xl font-black text-gray-800 mb-6">
-          Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">EduVerse</span>
+          Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Vinsup</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           At Vinsup Skill Academy, we bridge the gap between learning and employment. Our industry-focused curriculum, hands-on training, and expert guidance make us the ideal choice for students ready to step into the tech world. With 100 hours of focused learning, placement support, and a strong community, we’re committed to helping you succeed.
@@ -21,18 +21,21 @@ const FeaturesSection = () => (
           title="Lightning Fast"
           description="Our AI-powered platform delivers personalized content at incredible speeds, ensuring you never lose momentum in your learning journey."
           delay={0}
+          image="./whyus/image1.jfif"
         />
         <FloatingCard 
           icon={Target}
           title="Precision Learning"
           description="Advanced algorithms track your progress and adapt content difficulty to match your skill level, maximizing learning efficiency."
           delay={200}
+          image="./whyus/image2.jfif"
         />
         <FloatingCard 
           icon={Globe}
           title="Global Community"
           description="Connect with learners worldwide, participate in collaborative projects, and gain insights from diverse perspectives."
           delay={400}
+          image="./whyus/image3.jfif"
         />
       </div>
 

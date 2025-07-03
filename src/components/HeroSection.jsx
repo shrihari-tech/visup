@@ -260,7 +260,7 @@ const HeroSection = () => (
               rel="noopener noreferrer"
               className="border-2 border-white/30 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
             >
-              Watch Demo
+              View Offer
             </a>
           </div>
         </div>

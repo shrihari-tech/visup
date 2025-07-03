@@ -59,7 +59,7 @@ const CallToActionSection = () => {
           >
             Take a Look
           </button>
-          <a className="border-2 border-white/30 cursor-pointer text-white px-12 py-6 rounded-full text-xl font-bold hover:bg-white/10 transition-all duration-300 hover:scale-105 backdrop-blur-sm" href="https://forms.gle/FfRLCBQn7a2SkfHx5" target="_blank" >
+          <a className="border-2 border-white/30 cursor-pointer text-white px-12 py-6 rounded-full text-xl font-bold hover:bg-white/10 transition-all duration-300 hover:scale-105 backdrop-blur-sm" href="https://forms.gle/MMvpL26W5tp3ifd57" target="_blank" >
             Contact Us
           </a>
         </div>
