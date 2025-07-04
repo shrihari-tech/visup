@@ -422,7 +422,7 @@ const CurriculumModal = ({ course, onClose }) => {
 const CoursesSection = () => {
   const courses = [
     {
-      title: "Frontend Developer-React",
+      title: "Software Development",
       description: "This course is designed to equip you with the essential skills required to build modern, responsive, and user-friendly websites...",
       image: "/frontend.png",
       rating: "4.9",
@@ -434,12 +434,12 @@ const CoursesSection = () => {
         lectures: "35",
         students: "1500+",
         learningOutcomes: [
-          "HTML5 & CSS3 - Understand the structure of web pages using semantic HTML tags",
+          "Front-End Development: HTML5, CSS3, JavaScript (ES6+), ReactJS, Angular, Vue.js, Bootstrap, Responsive Web Design",
           "Style web pages using CSS, including advanced topics like Flexbox and Grid Layouts",
           "Create responsive designs with media queries for different devices",
           "Bootstrap 5 - Quickly design mobile-first, responsive layouts",
-          "JavaScript (ES6+) - Learn core programming concepts and modern syntax",
-          "ReactJS - Build dynamic and scalable single-page applications"
+          "Node.js, Express.js, Python (Django/Flask), Java (Spring Boot), REST APIs, Server-side Logic",
+          " Git, GitHub, Version Control, Deployment Strategies, Agile Methodologies"
         ],
         tools: [
           "Visual Studio Code",
@@ -506,18 +506,19 @@ const CoursesSection = () => {
         lectures: "48",
         students: "8,930",
         learningOutcomes: [
-          "Master design principles and visual hierarchy",
-          "Create user-centered designs and wireframes",
-          "Develop prototypes and interactive mockups",
-          "Design brand identities and logos",
-          "Understand color theory and typography"
+          "User Experience (UX): User Research, Persona Creation, User Journey Mapping, Information Architecture, Wireframing, Usability Testing, UX Principles",
+          "User Interface (UI): Visual Design Principles, Color Theory, Typography, Layout, Prototyping (Figma, , Sketch), Interaction Design, UI Best Practices",
+          // "Develop prototypes and interactive mockups",
+          // "Design brand identities and logos",
+          // "Understand color theory and typography"
         ],
         tools: [
           "Figma",
-          "Adobe Photoshop",
-          "Adobe Illustrator",
-          "Adobe XD",
-          "Sketch"
+          "Adobe",
+          "Illustrator",
+          "XD",
+          "Sketch",
+          "Photoshop"
         ],
         curriculum: [
           {
@@ -618,16 +619,17 @@ const CoursesSection = () => {
         lectures: "30",
         students: "10,200",
         learningOutcomes: [
-          "Analyze and interpret data using Excel and Power BI",
+          "Data Fundamentals: Data Collection, Data Cleaning, Data Visualization, Exploratory Data Analysis (EDA)",
           "Create interactive dashboards and reports",
           "Use SQL for data extraction and manipulation",
           "Visualize data effectively with charts and graphs"
         ],
         tools: [
-          "Excel",
+          "Python for Data Analysis (Pandas, NumPy, Matplotlib, Seaborn),",
           "Power BI",
-          "SQL Server Management Studio (SSMS)",
-          "Tableau"
+          "SQL for Database Management",
+          "Tableau",
+          " Microsoft Excel (Advanced)"
         ],
         curriculum: [
           {
@@ -704,60 +706,61 @@ const CoursesSection = () => {
       }
     },
     {
-      title: "PHP & Laravel Development",
-      description: "This course is crafted for aspiring web developers who want to master backend development using PHP...",
-      image: "/php.png",
+      title: "Digital Marketing Course Page",
+      description: "Marketing Professionals, Business Owners, Entrepreneurs, Graduates, Freelancers...",
+      image: "/dm.png",
       rating: "4.9",
       students: "11,300",
       duration: "10 weeks",
       courseData: {
-        title: "PHP & Laravel Development",
+        title: "Digital Marketing",
         duration: "10 weeks",
         lectures: "30",
         students: "11,300",
         learningOutcomes: [
-          "Understand PHP fundamentals and object-oriented programming",
-          "Build dynamic web applications using Laravel framework",
-          "Implement RESTful APIs and database interactions",
-          "Manage user authentication and authorization"
+          "SEO (Search Engine Optimization): On-page SEO, Off-page SEO, Keyword Research, Technical SEO, Google Analytics",
+          "SEM (Search Engine Marketing): Google Ads, PPC Campaigns",
+          "Social Media Marketing: Strategy, Content Creation, Paid Campaigns (Facebook Ad",
+          "Content Marketing: Strategy, Blogging, Video Marketing",
+          "Email Marketing: List Building, Campaign Management, Automation",
         ],
         tools: [
-          "PHP 8.x",
-          "Laravel Framework",
-          "MySQL or PostgreSQL",
-          "Composer"
+          "Google Ads","Google Analytics", 
+          "SEMrush", 
+          "Ahrefs (concepts)", 
+          "Mailchimp"
         ],
         curriculum: [
           {
-            title: "PHP Basics",
+            title: "Digital Marketing",
             topics: [
-              "PHP syntax, variables, and data types",
-              "Control structures and functions",
-              "Object-oriented programming in PHP"
+              "Digital Marketing Executive, SEO Specialist, Social Media Manager",
+              "PPC Specialist, Email Marketing Specialist",
+              "Content Marketing Specialist, Freelance Digital Marketer"
             ]
           },
-          {
-            title: "Laravel Framework",
-            topics: [
-              "Setting up Laravel environment",
-              "Routing, controllers, and views",
-              "Database migrations and Eloquent ORM"
-            ]
-          },
-          {
-            title: "Building Web Applications with Laravel",
-            topics: [
-              "Creating RESTful APIs with Laravel",
-              "User authentication and authorization",
-              "Deploying Laravel applications"
-            ]
-          }
+          // {
+          //   title: "Laravel Framework",
+          //   topics: [
+          //     "Setting up Laravel environment",
+          //     "Routing, controllers, and views",
+          //     "Database migrations and Eloquent ORM"
+          //   ]
+          // },
+          // {
+          //   title: "Building Web Applications with Laravel",
+          //   topics: [
+          //     "Creating RESTful APIs with Laravel",
+          //     "User authentication and authorization",
+          //     "Deploying Laravel applications"
+          //   ]
+          // }
         ],
-        projects: [
-          "Blog Application with User Authentication",
-          "E-commerce Platform Backend Development",
-          "RESTful API for Mobile App Integration"
-        ]
+        // projects: [
+        //   "Blog Application with User Authentication",
+        //   "E-commerce Platform Backend Development",
+        //   "RESTful API for Mobile App Integration"
+        // ]
       }
     },
     // Add more courses here with their respective courseData

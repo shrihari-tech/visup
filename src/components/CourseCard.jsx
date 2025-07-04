@@ -17,7 +17,7 @@ const CourseCard = ({ title, description, image, rating, students, duration }) =
     </div>
     <div className="p-8">
       <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">{title}</h3>
-      <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
+      <p className="text-gray-600 mb-6 text-justify leading-relaxed">{description}</p>
       <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
         <span className="flex items-center">
           <Users className="w-4 h-4 mr-1" />

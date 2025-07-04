@@ -63,7 +63,7 @@ import WorkProcessSection from "./components/WorkProcessSection";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import WhatsAppChat from "./components/WhatsAppChat";
-
+import Aboutus from "./components/Aboutus";
 function App() {
   const [frontendLoaded, setFrontendLoaded] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
@@ -187,6 +187,7 @@ function App() {
       <SplashCursor />
       <Navbar/>
       <HeroSection />
+      <Aboutus />
       <FeaturesSection />
       <FeaturedCoursesSection />
       <CoursesSection />

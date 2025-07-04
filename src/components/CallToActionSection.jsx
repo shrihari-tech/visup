@@ -7,15 +7,15 @@ const CallToActionSection = () => {
   const selectedProject = {
     title: "VINSUP Skill Academy",
     details: [
-      { id: 1, title: "", image: "./gallery/img1.jpg" },
-      { id: 2, title: "", image: "./gallery/img2.jpeg" },
-      { id: 3, title: "", image: "./gallery/img3.JPG" },
-      { id: 4, title: "", image: "./gallery/img4.JPG" },
-      { id: 5, title: "", image: "./gallery/img5.JPG" },
-      { id: 6, title: "", image: "./gallery/img6.JPG" },
-      { id: 7, title: "", image: "./gallery/img7.JPG" },
-      { id: 8, title: "", image: "./gallery/img8.PNG" },
-      { id: 9, title: "", image: "./gallery/img9.JPG" },
+      { id: 1, title: "", image: "./gallery/img1.png" },
+      { id: 2, title: "", image: "./gallery/img2.png" },
+      { id: 3, title: "", image: "./gallery/img3.png" },
+      { id: 4, title: "", image: "./gallery/img4.png" },
+      { id: 5, title: "", image: "./gallery/img5.png" },
+      { id: 6, title: "", image: "./gallery/img6.png" },
+      { id: 7, title: "", image: "./gallery/img7.png" },
+      { id: 8, title: "", image: "./gallery/img8.png" },
+      { id: 9, title: "", image: "./gallery/img9.png" },
       { id: 10, title: "", image: "./gallery/IMG_0022.JPG"},
     ]
   };

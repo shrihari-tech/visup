@@ -346,12 +346,17 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-1.5 bg-white bg-opacity-50 backdrop-blur-md text-black shadow-sm">
         <div className="flex items-center space-x-2">
+          <a href="#home">
           <img src="./logo.png" alt="vinsup skill accademy" className="h-25 w-44"/>
+          </a>
         </div>
         <div className="hidden md:flex flex-1 justify-center">
           <ul className="flex space-x-8 font-medium text-xl text-black">
             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
               <button onClick={() => handleNavClick('#home')}>Home</button>
+            </li>
+            <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
+              <button onClick={() => handleNavClick('#aboutus')}>About Us</button>
             </li>
             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
               <button onClick={() => handleNavClick('#whyus')}>Why Us</button>
@@ -390,6 +395,9 @@ const Navbar = () => {
           <ul className="flex flex-col font-medium text-xl items-center space-y-4 p-4">
             <li>
               <button onClick={() => handleNavClick('#home')} className="hover:text-blue-500 transition-colors duration-200">Home</button>
+            </li>
+            <li>
+              <button onClick={() => handleNavClick('#aboutus')} className="hover:text-blue-500 transition-colors duration-200">About Us</button>   
             </li>
             <li>
               <button onClick={() => handleNavClick('#whyus')} className="hover:text-blue-500 transition-colors duration-200">Why Us</button>

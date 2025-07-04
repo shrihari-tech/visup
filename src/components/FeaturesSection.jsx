@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, Users, Award, Zap, Target, Globe } from "lucide-react";
+import { BookOpen, Users, Award, Zap, ChartLine, Globe, Figma, TvMinimalPlay } from "lucide-react";
 import FloatingCard from "./FloatingCard";
 import StatCard from "./StatCard";
 import LandingPage from "./LandingPage";
@@ -10,32 +10,45 @@ const FeaturesSection = () => (
         <h2 className="text-5xl md:text-6xl font-black text-gray-800 mb-6">
           Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Vinsup</span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          At Vinsup Skill Academy, we bridge the gap between learning and employment. Our industry-focused curriculum, hands-on training, and expert guidance make us the ideal choice for students ready to step into the tech world. With 100 hours of focused learning, placement support, and a strong community, we’re committed to helping you succeed.
+        <p className="text-xl text-justify text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Unbeatable Value at Rs. 14,999: "High-quality, practical tech education shouldn't break the bank. Invest in your future with any of our premium courses, all at an accessible flat fee of Rs. 14,999, ensuring top-tier learning is within your reach.
+The Ultimate Learning Environment: "Experience learning like never before in our modern, 3-floor facility located in coimbatore. Every classroom is fully air-conditioned, equipped with high-definition projectors, and designed for collaborative, immersive learning. We provide the perfect atmosphere for focused skill development and innovation
+
+
+Expert-Led & Practical: "Learn from industry veterans who bring real-world insights and practical experience to every session. Our curriculum is hands-on, project-based, and aligned with current industry demands, ensuring you build a robust portfolio.
+Career-Focused Approach: "Beyond skills, we focus on your career. Our programs are geared towards empowering you for immediate employment, career advancement, or successful freelancing.
+
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
+      <div className="grid md:grid-cols-2 gap-8 mb-20">
         <FloatingCard 
-          icon={Zap}
-          title="Lightning Fast"
-          description="Our AI-powered platform delivers personalized content at incredible speeds, ensuring you never lose momentum in your learning journey."
+          icon={Globe}
+          title="Full Stack Development"
+          description="Build web applications end-to-end. Master front-end & back-end technologies. Full Stack Developer Course."
           delay={0}
           image="./whyus/image1.jfif"
         />
         <FloatingCard 
-          icon={Target}
-          title="Precision Learning"
-          description="Advanced algorithms track your progress and adapt content difficulty to match your skill level, maximizing learning efficiency."
+          icon={Figma}
+          title="UI/UX Design"
+          description="Craft intuitive & beautiful user experiences. Design impactful digital products. UI UX Training."
           delay={200}
           image="./whyus/image2.jfif"
         />
         <FloatingCard 
-          icon={Globe}
-          title="Global Community"
-          description="Connect with learners worldwide, participate in collaborative projects, and gain insights from diverse perspectives."
+          icon={ChartLine}
+          title="Data Analytics"
+          description="Uncover insights from data. Drive smart business decisions. Data Analytics Certification India."
           delay={400}
           image="./whyus/image3.jfif"
+        />
+        <FloatingCard 
+          icon={TvMinimalPlay}
+          title="Digital Marketing"
+          description="Dominate the online landscape. Grow brands with cutting-edge strategies. Digital Marketing Course."
+          delay={600}
+          image="./whyus/image4.jfif"
         />
       </div>
 
