@@ -68,6 +68,7 @@ export default function WhatsAppChat() {
           ...baseStyle,
           bottom: "100px", // WhatsApp button higher
           background: "#25D366",
+          animation : "pulse 2s infinite"
         }}
         title="Chat with us on WhatsApp"
       >
@@ -79,6 +80,7 @@ export default function WhatsAppChat() {
           ...baseStyle,
           bottom: "32px", // Call button below WhatsApp
           background: "#34b7f1",
+          animation: "pulse 2s infinite 0.5s" // Slight delay for call button
         }}
         title="Call us"
       >
