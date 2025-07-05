@@ -56,7 +56,7 @@ Career-Focused Approach: "Beyond skills, we focus on your career. Our programs a
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-white rounded-3xl shadow-2xl p-12">
         <StatCard number="15K+" label="Students" icon={Users} />
         <StatCard number="50+" label="Courses" icon={BookOpen} />
-        <StatCard number="100%" label="Pratical Experience and Live Products" icon={Award} />
+        <StatCard number="100%" label="Pratical Experience and Live Projects" icon={Award} />
         <StatCard number="24/7" label="Support" icon={Zap} />
       </div>
     </div>
