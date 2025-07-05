@@ -101,7 +101,7 @@
 
 
 import React, { useState } from "react";
-import { Users, Play, Star, X, ChevronDown, ChevronRight, Clock, BookOpen, Award, Code, Laptop, Globe, Database, Smartphone, PenTool, BarChart } from "lucide-react";
+// import { Users, Play, Star, X, ChevronDown, ChevronRight, Clock, BookOpen, Award, Code, Laptop, Globe, Database, Smartphone, PenTool, BarChart } from "lucide-react";
 
 const CourseCard = ({ title, description, image, rating, students, duration, courseData }) => {
   const [showCurriculum, setShowCurriculum] = useState(false);
@@ -285,8 +285,168 @@ const CourseCard = ({ title, description, image, rating, students, duration, cou
 //   );
 // };
 
+// const CurriculumModal = ({ course, onClose }) => {
+//   const [expandedSections, setExpandedSections] = useState({});
+
+//   const toggleSection = (sectionId) => {
+//     setExpandedSections(prev => ({
+//       ...prev,
+//       [sectionId]: !prev[sectionId]
+//     }));
+//   };
+
+//   const getIconForSection = (title) => {
+//     if (title.toLowerCase().includes('html') || title.toLowerCase().includes('css')) return <Code className="w-4 h-4 sm:w-5 sm:h-5" />;
+//     if (title.toLowerCase().includes('javascript')) return <Globe className="w-4 h-4 sm:w-5 sm:h-5" />;
+//     if (title.toLowerCase().includes('react')) return <Laptop className="w-4 h-4 sm:w-5 sm:h-5" />;
+//     if (title.toLowerCase().includes('bootstrap')) return <PenTool className="w-4 h-4 sm:w-5 sm:h-5" />;
+//     if (title.toLowerCase().includes('project')) return <Award className="w-4 h-4 sm:w-5 sm:h-5" />;
+//     return <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />;
+//   };
+
+//   return (
+//     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4">
+//       <div className="bg-white rounded-2xl sm:rounded-3xl max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-hidden shadow-2xl mx-2 sm:mx-4">
+//         {/* Header */}
+//         <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 sm:p-6 relative">
+//           <button 
+//             onClick={onClose}
+//             className="absolute top-3 right-3 sm:top-4 sm:right-4 p-1.5 sm:p-2 hover:bg-white/20 rounded-full transition-colors"
+//           >
+//             <X className="w-5 h-5 sm:w-6 sm:h-6" />
+//           </button>
+//           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 pr-12 sm:pr-16">{course.title}</h2>
+//           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-xs sm:text-sm opacity-90">
+//             <span className="flex items-center">
+//               <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+//               {course.duration}
+//             </span>
+//             <span className="flex items-center">
+//               <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+//               {course.lectures} Lectures
+//             </span>
+//             <span className="flex items-center">
+//               <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+//               {course.students}
+//             </span>
+//           </div>
+//         </div>
+
+//         {/* Course Info */}
+//         <div className="p-4 sm:p-6 border-b border-gray-200">
+//           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+//             <div>
+//               <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3">What You Will Learn</h3>
+//               <ul className="space-y-2">
+//                 {course.learningOutcomes.map((outcome, index) => (
+//                   <li key={index} className="flex items-start text-gray-600 text-sm sm:text-base">
+//                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
+//                     {outcome}
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+//             <div className="mt-6 lg:mt-0">
+//               <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3">Tools You'll Use</h3>
+//               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+//                 {course.tools.map((tool, index) => (
+//                   <div key={index} className="flex items-center text-gray-600 bg-gray-50 p-2 sm:p-3 rounded-lg">
+//                     {getIconForSection(tool)}
+//                     <span className="ml-2 text-xs sm:text-sm">{tool}</span>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Curriculum */}
+//         <div className="p-4 sm:p-6 overflow-y-auto max-h-60 sm:max-h-80 lg:max-h-96">
+//           <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">Course Curriculum</h3>
+//           <div className="space-y-2 sm:space-y-3">
+//             {course.curriculum.map((section, index) => (
+//               <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+//                 <button
+//                   onClick={() => toggleSection(index)}
+//                   className="w-full p-3 sm:p-4 text-left hover:bg-gray-50 transition-colors flex items-center justify-between"
+//                 >
+//                   <div className="flex items-center min-w-0 flex-1">
+//                     {getIconForSection(section.title)}
+//                     <div className="ml-2 sm:ml-3 min-w-0 flex-1">
+//                       <h4 className="font-semibold text-gray-800 text-sm sm:text-base truncate">{section.title}</h4>
+//                       <p className="text-xs sm:text-sm text-gray-500">{section.topics.length} topics</p>
+//                     </div>
+//                   </div>
+//                   {expandedSections[index] ? 
+//                     <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 ml-2 flex-shrink-0" /> : 
+//                     <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 ml-2 flex-shrink-0" />
+//                   }
+//                 </button>
+                
+//                 {expandedSections[index] && (
+//                   <div className="px-3 sm:px-4 pb-3 sm:pb-4 bg-gray-50">
+//                     <ul className="space-y-1 sm:space-y-2">
+//                       {section.topics.map((topic, topicIndex) => (
+//                         <li key={topicIndex} className="flex items-start text-gray-600 py-1 text-sm sm:text-base">
+//                           <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-purple-400 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
+//                           <span className="leading-relaxed">{topic}</span>
+//                         </li>
+//                       ))}
+//                     </ul>
+//                   </div>
+//                 )}
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Projects */}
+//         <div className="p-4 sm:p-6 bg-gray-50 border-t border-gray-200">
+//           <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">Projects</h3>
+//           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+//             {course.projects.map((project, index) => (
+//               <div key={index} className="bg-white p-3 sm:p-4 rounded-xl shadow-sm">
+//                 <div className="flex items-center">
+//                   <Award className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 mr-2 flex-shrink-0" />
+//                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base leading-tight">{project}</h4>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+import { 
+  X, 
+  Clock, 
+  BookOpen, 
+  Users, 
+  ChevronDown, 
+  ChevronRight, 
+  Code, 
+  Globe, 
+  Laptop, 
+  PenTool, 
+  Award,
+  Star,
+  Play,
+  CheckCircle,
+  Target,
+  Zap,
+  Monitor,
+  Smartphone,
+  Database,
+  Layers,
+  Palette,
+  Settings
+} from 'lucide-react';
+
 const CurriculumModal = ({ course, onClose }) => {
   const [expandedSections, setExpandedSections] = useState({});
+  const [activeTab, setActiveTab] = useState('overview');
 
   const toggleSection = (sectionId) => {
     setExpandedSections(prev => ({
@@ -296,140 +456,342 @@ const CurriculumModal = ({ course, onClose }) => {
   };
 
   const getIconForSection = (title) => {
-    if (title.toLowerCase().includes('html') || title.toLowerCase().includes('css')) return <Code className="w-4 h-4 sm:w-5 sm:h-5" />;
-    if (title.toLowerCase().includes('javascript')) return <Globe className="w-4 h-4 sm:w-5 sm:h-5" />;
-    if (title.toLowerCase().includes('react')) return <Laptop className="w-4 h-4 sm:w-5 sm:h-5" />;
-    if (title.toLowerCase().includes('bootstrap')) return <PenTool className="w-4 h-4 sm:w-5 sm:h-5" />;
-    if (title.toLowerCase().includes('project')) return <Award className="w-4 h-4 sm:w-5 sm:h-5" />;
+    const lowerTitle = title.toLowerCase();
+    if (lowerTitle.includes('html') || lowerTitle.includes('css')) return <Code className="w-4 h-4 sm:w-5 sm:h-5" />;
+    if (lowerTitle.includes('javascript')) return <Globe className="w-4 h-4 sm:w-5 sm:h-5" />;
+    if (lowerTitle.includes('react')) return <Laptop className="w-4 h-4 sm:w-5 sm:h-5" />;
+    if (lowerTitle.includes('bootstrap')) return <PenTool className="w-4 h-4 sm:w-5 sm:h-5" />;
+    if (lowerTitle.includes('project')) return <Award className="w-4 h-4 sm:w-5 sm:h-5" />;
+    if (lowerTitle.includes('database')) return <Database className="w-4 h-4 sm:w-5 sm:h-5" />;
+    if (lowerTitle.includes('design')) return <Palette className="w-4 h-4 sm:w-5 sm:h-5" />;
+    if (lowerTitle.includes('responsive')) return <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />;
+    if (lowerTitle.includes('api')) return <Layers className="w-4 h-4 sm:w-5 sm:h-5" />;
     return <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />;
   };
 
+  const getToolIcon = (tool) => {
+    const lowerTool = tool.toLowerCase();
+    if (lowerTool.includes('html')) return <Code className="w-4 h-4 text-orange-500" />;
+    if (lowerTool.includes('css')) return <Palette className="w-4 h-4 text-blue-500" />;
+    if (lowerTool.includes('javascript')) return <Globe className="w-4 h-4 text-yellow-500" />;
+    if (lowerTool.includes('react')) return <Laptop className="w-4 h-4 text-cyan-500" />;
+    if (lowerTool.includes('bootstrap')) return <PenTool className="w-4 h-4 text-purple-500" />;
+    if (lowerTool.includes('vscode')) return <Monitor className="w-4 h-4 text-blue-600" />;
+    if (lowerTool.includes('git')) return <Settings className="w-4 h-4 text-gray-600" />;
+    return <Zap className="w-4 h-4 text-green-500" />;
+  };
+
+  // Sample course data for demonstration
+  const sampleCourse = {
+    title: "Complete Web Development Bootcamp",
+    duration: "12 weeks",
+    lectures: "180",
+    students: "25,000+ students",
+    rating: "4.8",
+    level: "Beginner to Advanced",
+    instructor: "John Doe",
+    price: "$299",
+    learningOutcomes: [
+      "Build responsive websites with HTML5, CSS3, and JavaScript",
+      "Master modern frameworks like React and Vue.js",
+      "Create full-stack applications with Node.js and Express",
+      "Deploy applications to cloud platforms like AWS and Heroku",
+      "Understand database management with MongoDB and MySQL",
+      "Implement user authentication and security best practices"
+    ],
+    tools: [
+      "HTML5 & CSS3",
+      "JavaScript ES6+",
+      "React.js",
+      "Node.js",
+      "Bootstrap",
+      "VS Code",
+      "Git & GitHub",
+      "MongoDB"
+    ],
+    curriculum: [
+      {
+        title: "HTML & CSS Fundamentals",
+        topics: [
+          "HTML structure and semantic elements",
+          "CSS selectors and properties",
+          "Flexbox and Grid layouts",
+          "Responsive design principles",
+          "CSS animations and transitions"
+        ]
+      },
+      {
+        title: "JavaScript Essentials",
+        topics: [
+          "Variables, functions, and data types",
+          "DOM manipulation and events",
+          "Asynchronous programming with promises",
+          "Modern ES6+ features",
+          "Error handling and debugging"
+        ]
+      },
+      {
+        title: "React Development",
+        topics: [
+          "Component architecture and JSX",
+          "State management with hooks",
+          "React Router for navigation",
+          "API integration and data fetching",
+          "Testing React applications"
+        ]
+      },
+      {
+        title: "Backend Development",
+        topics: [
+          "Node.js and Express.js setup",
+          "RESTful API design",
+          "Database integration",
+          "Authentication and authorization",
+          "Server deployment and hosting"
+        ]
+      }
+    ],
+    projects: [
+      "Personal Portfolio Website",
+      "E-commerce Shopping Cart",
+      "Social Media Dashboard",
+      "Real-time Chat Application",
+      "Task Management System",
+      "Weather App with API Integration"
+    ],
+    requirements: [
+      "Basic computer literacy",
+      "No prior programming experience required",
+      "Reliable internet connection",
+      "Computer with at least 4GB RAM"
+    ]
+  };
+
+  const displayCourse = course;
+
+  const TabButton = ({ id, label, icon: Icon }) => (
+    <button
+      onClick={() => setActiveTab(id)}
+      className={`flex items-center px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base font-medium rounded-lg transition-all duration-200 ${
+        activeTab === id
+          ? 'bg-white text-purple-600 shadow-md'
+          : 'text-white/80 hover:text-white hover:bg-white/10'
+      }`}
+    >
+      <Icon className="w-4 h-4 mr-1 sm:mr-2" />
+      {label}
+    </button>
+  );
+
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4">
-      <div className="bg-white rounded-2xl sm:rounded-3xl max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-hidden shadow-2xl mx-2 sm:mx-4">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 sm:p-6 relative">
+      <div className="bg-white rounded-2xl sm:rounded-3xl max-w-5xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-hidden shadow-2xl mx-2 sm:mx-4">
+        {/* Enhanced Header */}
+        <div className="bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 text-white p-4 sm:p-6 relative">
           <button 
             onClick={onClose}
-            className="absolute top-3 right-3 sm:top-4 sm:right-4 p-1.5 sm:p-2 hover:bg-white/20 rounded-full transition-colors"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 p-1.5 sm:p-2 hover:bg-white/20 rounded-full transition-colors z-10"
           >
             <X className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 pr-12 sm:pr-16">{course.title}</h2>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-xs sm:text-sm opacity-90">
-            <span className="flex items-center">
-              <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
-              {course.duration}
-            </span>
-            <span className="flex items-center">
-              <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
-              {course.lectures} Lectures
-            </span>
-            <span className="flex items-center">
-              <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
-              {course.students}
-            </span>
-          </div>
-        </div>
-
-        {/* Course Info */}
-        <div className="p-4 sm:p-6 border-b border-gray-200">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-            <div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3">What You Will Learn</h3>
-              <ul className="space-y-2">
-                {course.learningOutcomes.map((outcome, index) => (
-                  <li key={index} className="flex items-start text-gray-600 text-sm sm:text-base">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
-                    {outcome}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-6 lg:mt-0">
-              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3">Tools You'll Use</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
-                {course.tools.map((tool, index) => (
-                  <div key={index} className="flex items-center text-gray-600 bg-gray-50 p-2 sm:p-3 rounded-lg">
-                    {getIconForSection(tool)}
-                    <span className="ml-2 text-xs sm:text-sm">{tool}</span>
-                  </div>
-                ))}
+          
+          <div className="mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 pr-12 sm:pr-16 leading-tight">
+              {displayCourse.title}
+            </h2>
+            <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+              <div className="flex items-center">
+                <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                <span className="text-sm sm:text-base font-medium">{displayCourse.rating}</span>
               </div>
+              <span className="text-sm sm:text-base opacity-80">•</span>
+              <span className="text-sm sm:text-base opacity-90">{displayCourse.level}</span>
+              <span className="text-sm sm:text-base opacity-80">•</span>
+              <span className="text-sm sm:text-base opacity-90">{displayCourse.instructor}</span>
             </div>
+            <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm opacity-90">
+              <span className="flex items-center bg-white/20 px-2 sm:px-3 py-1 rounded-full">
+                <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                {displayCourse.duration}
+              </span>
+              <span className="flex items-center bg-white/20 px-2 sm:px-3 py-1 rounded-full">
+                <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                {displayCourse.lectures} Lectures
+              </span>
+              <span className="flex items-center bg-white/20 px-2 sm:px-3 py-1 rounded-full">
+                <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                {displayCourse.students}
+              </span>
+            </div>
+          </div>
+
+          {/* Navigation Tabs */}
+          <div className="flex flex-wrap gap-2 sm:gap-3">
+            <TabButton id="overview" label="Overview" icon={BookOpen} />
+            <TabButton id="curriculum" label="Curriculum" icon={Layers} />
+            <TabButton id="projects" label="Projects" icon={Award} />
+            {/* <TabButton id="requirements" label="Requirements" icon={CheckCircle} /> */}
           </div>
         </div>
 
-        {/* Curriculum */}
-        <div className="p-4 sm:p-6 overflow-y-auto max-h-60 sm:max-h-80 lg:max-h-96">
-          <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">Course Curriculum</h3>
-          <div className="space-y-2 sm:space-y-3">
-            {course.curriculum.map((section, index) => (
-              <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
-                <button
-                  onClick={() => toggleSection(index)}
-                  className="w-full p-3 sm:p-4 text-left hover:bg-gray-50 transition-colors flex items-center justify-between"
-                >
-                  <div className="flex items-center min-w-0 flex-1">
-                    {getIconForSection(section.title)}
-                    <div className="ml-2 sm:ml-3 min-w-0 flex-1">
-                      <h4 className="font-semibold text-gray-800 text-sm sm:text-base truncate">{section.title}</h4>
-                      <p className="text-xs sm:text-sm text-gray-500">{section.topics.length} topics</p>
-                    </div>
+        {/* Content Area */}
+        <div className="overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[calc(90vh-200px)]">
+          {activeTab === 'overview' && (
+            <div className="p-4 sm:p-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <Target className="w-5 h-5 mr-2 text-purple-600" />
+                    What You Will Learn
+                  </h3>
+                  <div className="space-y-3">
+                    {displayCourse.learningOutcomes.map((outcome, index) => (
+                      <div key={index} className="flex items-start bg-gradient-to-r from-purple-50 to-pink-50 p-3 rounded-lg">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm sm:text-base leading-relaxed">{outcome}</span>
+                      </div>
+                    ))}
                   </div>
-                  {expandedSections[index] ? 
-                    <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 ml-2 flex-shrink-0" /> : 
-                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 ml-2 flex-shrink-0" />
-                  }
-                </button>
+                </div>
                 
-                {expandedSections[index] && (
-                  <div className="px-3 sm:px-4 pb-3 sm:pb-4 bg-gray-50">
-                    <ul className="space-y-1 sm:space-y-2">
-                      {section.topics.map((topic, topicIndex) => (
-                        <li key={topicIndex} className="flex items-start text-gray-600 py-1 text-sm sm:text-base">
-                          <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-purple-400 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
-                          <span className="leading-relaxed">{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <Settings className="w-5 h-5 mr-2 text-purple-600" />
+                    Tools & Technologies
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {displayCourse.tools.map((tool, index) => (
+                      <div key={index} className="flex items-center bg-white border border-gray-200 hover:border-purple-300 p-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-200">
+                        {getToolIcon(tool)}
+                        <span className="ml-3 text-gray-700 text-sm sm:text-base font-medium">{tool}</span>
+                      </div>
+                    ))}
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Projects */}
-        <div className="p-4 sm:p-6 bg-gray-50 border-t border-gray-200">
-          <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">Projects</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            {course.projects.map((project, index) => (
-              <div key={index} className="bg-white p-3 sm:p-4 rounded-xl shadow-sm">
-                <div className="flex items-center">
-                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 mr-2 flex-shrink-0" />
-                  <h4 className="font-semibold text-gray-800 text-sm sm:text-base leading-tight">{project}</h4>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          )}
+
+          {activeTab === 'curriculum' && (
+            <div className="p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-6 flex items-center">
+                <Layers className="w-5 h-5 mr-2 text-purple-600" />
+                Course Curriculum
+              </h3>
+              <div className="space-y-4">
+                {displayCourse.curriculum.map((section, index) => (
+                  <div key={index} className="border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <button
+                      onClick={() => toggleSection(index)}
+                      className="w-full p-4 sm:p-5 text-left hover:bg-gray-50 transition-colors flex items-center justify-between group"
+                    >
+                      <div className="flex items-center min-w-0 flex-1">
+                        <div className="p-2 bg-purple-100 rounded-lg mr-3 sm:mr-4 group-hover:bg-purple-200 transition-colors">
+                          {getIconForSection(section.title)}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <h4 className="font-semibold text-gray-800 text-sm sm:text-base mb-1">{section.title}</h4>
+                          <p className="text-xs sm:text-sm text-gray-500 flex items-center">
+                            <Play className="w-3 h-3 mr-1" />
+                            {section.topics.length} topics
+                          </p>
+                        </div>
+                      </div>
+                      <div className="ml-4 flex items-center">
+                        <span className="text-xs sm:text-sm text-gray-400 mr-2">
+                          {expandedSections[index] ? 'Hide' : 'Show'}
+                        </span>
+                        {expandedSections[index] ? 
+                          <ChevronDown className="w-5 h-5 text-purple-600 transition-transform duration-200" /> : 
+                          <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-600 transition-colors duration-200" />
+                        }
+                      </div>
+                    </button>
+                    
+                    {expandedSections[index] && (
+                      <div className="px-4 sm:px-5 pb-4 sm:pb-5 bg-gradient-to-r from-gray-50 to-purple-50">
+                        <div className="space-y-3">
+                          {section.topics.map((topic, topicIndex) => (
+                            <div key={topicIndex} className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                              <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                <span className="text-purple-600 text-xs font-medium">{topicIndex + 1}</span>
+                              </div>
+                              <span className="text-gray-700 text-sm sm:text-base leading-relaxed">{topic}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'projects' && (
+            <div className="p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-6 flex items-center">
+                <Award className="w-5 h-5 mr-2 text-purple-600" />
+                Hands-on Projects
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                {displayCourse.projects.map((project, index) => (
+                  <div key={index} className="bg-gradient-to-br from-white to-purple-50 border border-purple-200 p-4 sm:p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105">
+                    <div className="flex items-center mb-3">
+                      <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                        <Award className="w-5 h-5 text-purple-600" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-800 text-sm sm:text-base">{project}</h4>
+                        <p className="text-xs sm:text-sm text-gray-500">Project #{index + 1}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs sm:text-sm text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
+                        Build & Deploy
+                      </span>
+                      <ChevronRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* {activeTab === 'requirements' && (
+            <div className="p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-6 flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-purple-600" />
+                Requirements
+              </h3>
+              <div className="space-y-4">
+                {displayCourse.requirements.map((requirement, index) => (
+                  <div key={index} className="flex items-start bg-green-50 border border-green-200 p-4 rounded-lg">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm sm:text-base leading-relaxed">{requirement}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )} */}
         </div>
       </div>
     </div>
   );
 };
 
+
 const CoursesSection = () => {
   const courses = [
     {
       title: "Software Development",
       description: "This course is designed to equip you with the essential skills required to build modern, responsive, and user-friendly websites...",
-      image: "/frontend.png",
+      image: "/sd.png",
       rating: "4.9",
       students: "12,450",
       duration: "100 hours",
       courseData: { 
-        title: "Front End Development - React",
+        title: "Software Development",
         duration: "100 hours",
         lectures: "35",
         students: "1500+",
@@ -756,11 +1118,11 @@ const CoursesSection = () => {
           //   ]
           // }
         ],
-        // projects: [
-        //   "Blog Application with User Authentication",
-        //   "E-commerce Platform Backend Development",
-        //   "RESTful API for Mobile App Integration"
-        // ]
+        projects: [
+          "Email Marketing Campaign",
+          "Content Marketing Campaign",
+          "Social Media Audit and Strategy Plan"
+        ]
       }
     },
     // Add more courses here with their respective courseData
