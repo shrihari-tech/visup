@@ -1,56 +1,3 @@
-// import React, { useState, useEffect } from 'react'
-// import Navbar from './components/Navbar';
-// import SplashCursor from './BlitsBlocks/SplashCursor/SplashCursor'
-// import HeroSection from "./components/HeroSection";
-// import FeaturesSection from "./components/FeaturesSection";
-// import FeaturedCoursesSection from "./components/FeaturedCoursesSection";
-// import CoursesSection from "./components/CoursesSection";
-// import CallToActionSection from "./components/CallToActionSection";
-// import WorkProcessSection from "./components/WorkProcessSection";
-// import Footer from "./components/Footer";
-// import LandingPage from "./components/LandingPage";
-// import WhatsAppChat from "./components/WhatsAppChat";
-// function App() {
-//   const [frontendLoaded, setFrontendLoaded] = useState(false);
-
-//   useEffect(() => {
-//     // Simulate loading; replace timeout with real data loading if needed!
-//     const timer = setTimeout(() => setFrontendLoaded(true), 2500);
-//     return () => clearTimeout(timer);
-//   }, []);
-
-//   if (!frontendLoaded) {
-//     // Inline logo splash, center screen, white bg, blinking
-//     return (
-//       <div className="fixed inset-0 flex items-center justify-center bg-white">
-//         <img
-//           src="/welcome.gif" // <-- Set your logo path here
-//           alt="Logo"
-//           className="w-96 h-96"
-//         />
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <>
-//       <SplashCursor />
-//       <Navbar/>
-//       <HeroSection />
-//       <FeaturesSection />
-//       <FeaturedCoursesSection />
-//       <CoursesSection />
-//       <CallToActionSection />
-//       <WorkProcessSection />
-//       <Footer/>
-//       <WhatsAppChat />
-//     </>
-//   )
-// }
-
-// export default App
-
-
 import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar';
 import SplashCursor from './BlitsBlocks/SplashCursor/SplashCursor'
@@ -64,6 +11,11 @@ import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import WhatsAppChat from "./components/WhatsAppChat";
 import Aboutus from "./components/Aboutus";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
+import Materials from "./components/Materials";
+import Profile from "./components/Profile";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   const [frontendLoaded, setFrontendLoaded] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
@@ -184,7 +136,7 @@ function App() {
 
   return (
     <>
-      <SplashCursor />
+      {/* <SplashCursor />
       <Navbar/>
       <HeroSection />
       <Aboutus />
@@ -194,9 +146,35 @@ function App() {
       <CallToActionSection />
       <WorkProcessSection />
       <Footer/>
-      <WhatsAppChat />
+      <WhatsAppChat /> */}
+      <BrowserRouter>
+      <SplashCursor />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <HeroSection />
+              <Aboutus />
+              <FeaturesSection />
+              <FeaturedCoursesSection />
+              <CoursesSection />
+              <CallToActionSection />
+              <WorkProcessSection />
+              <Footer />
+              <WhatsAppChat />
+            </>
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/materials" element={<Materials />} />
+        <Route path="/profile" element={<Profile/>}/>
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
 
-export default App
+export default App;
