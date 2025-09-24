@@ -322,17 +322,157 @@
 
 // export default Navbar;
 
-import React, { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
-// import workerSrc from 'pdfjs-dist/build/pdf.worker.entry';
+// import React, { useState } from 'react';
+// import { Document, Page, pdfjs } from 'react-pdf';
+// // import workerSrc from 'pdfjs-dist/build/pdf.worker.entry';
 
-pdfjs.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+// pdfjs.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+// const Navbar = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [showModal, setShowModal] = useState(false);
+//   const toggleMenu = () => setIsOpen(!isOpen);
+//   const toggleModal = () => setShowModal(!showModal);
+//   const brouchreUrl = "/broucher.pdf";
+
+//   const handleNavClick = (href) => {
+//     setIsOpen(false);
+//     const element = document.querySelector(href);
+//     if (element) {
+//       element.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
+
+//   return (
+//     <>
+//       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-1.5 bg-white bg-opacity-50 backdrop-blur-md text-black shadow-sm">
+//         <div className="flex items-center space-x-2">
+//           <a href="#home">
+//           <img src="./logo.png" alt="vinsup skill accademy" className="h-25 w-44"/>
+//           </a>
+//         </div>
+//         <div className="hidden md:flex flex-1 justify-center">
+//           <ul className="flex space-x-8 font-medium text-xl text-black">
+//             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
+//               <button onClick={() => handleNavClick('#home')}>Home</button>
+//             </li>
+//             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
+//               <button onClick={() => handleNavClick('#aboutus')}>About Us</button>
+//             </li>
+//             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
+//               <button onClick={() => handleNavClick('#whyus')}>Why Us</button>
+//             </li>
+//             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
+//               <button onClick={() => handleNavClick('#services')}>Services</button>
+//             </li>
+//             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
+//               <button onClick={() => handleNavClick('#courses')}>Courses</button>
+//             </li>
+//             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
+//               <button onClick={() => handleNavClick('#process')}>Process</button>
+//             </li>
+//           </ul>
+//         </div>
+//         <div className="md:hidden">
+//           <button 
+//             onClick={toggleMenu} 
+//             className="text-black text-2xl p-2 hover:bg-black hover:bg-opacity-10 rounded transition-colors duration-200"
+//             aria-label="Toggle mobile menu"
+//           >
+//             {isOpen ? '✕' : '☰'}
+//           </button>
+//         </div>
+//         <div className="hidden md:block">
+//           {/* <button
+//             onClick={toggleModal}
+//             className="border border-gray-400 text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition duration-200"
+//           >
+//             Get Brochure
+//           </button> */}
+//         </div>
+//       </nav>
+//       {isOpen && (
+//         <div className="fixed top-16 left-0 right-0 bg-white bg-opacity-95 backdrop-blur-md text-black w-full z-40 shadow-lg border-t border-gray-200">
+//           <ul className="flex flex-col font-medium text-xl items-center space-y-4 p-4">
+//             <li>
+//               <button onClick={() => handleNavClick('#home')} className="hover:text-blue-500 transition-colors duration-200">Home</button>
+//             </li>
+//             <li>
+//               <button onClick={() => handleNavClick('#aboutus')} className="hover:text-blue-500 transition-colors duration-200">About Us</button>   
+//             </li>
+//             <li>
+//               <button onClick={() => handleNavClick('#whyus')} className="hover:text-blue-500 transition-colors duration-200">Why Us</button>
+//             </li>
+//             <li>
+//               <button onClick={() => handleNavClick('#services')} className="hover:text-blue-500 transition-colors duration-200">Services</button>
+//             </li>
+//             <li>
+//               <button onClick={() => handleNavClick('#courses')} className="hover:text-blue-500 transition-colors duration-200">Courses</button>
+//             </li>
+//             <li>
+//               <button onClick={() => handleNavClick('#process')} className="hover:text-blue-500 transition-colors duration-200">Process</button>
+//             </li>
+//             <li>
+//               {/* <button
+//                 onClick={() => {
+//                   toggleModal();
+//                   setIsOpen(false);
+//                 }}
+//                 className="mt-2 w-full max-w-xs border border-gray-400 text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition duration-200"
+//               >
+//                 Get Brochure
+//               </button> */}
+//             </li>
+//           </ul>
+//         </div>
+//       )}
+//       {showModal && (
+//         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+//           <div className="relative bg-white w-11/12 md:w-3/4 max-w-4xl h-[80vh] p-4 rounded-lg shadow-lg">
+//             <button
+//               onClick={toggleModal}
+//               className="absolute top-2 right-4 text-black text-xl hover:bg-gray-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200"
+//               aria-label="Close modal"
+//             >
+//               ✕
+//             </button>
+//             <div className="w-full h-full border border-gray-200 rounded bg-gray-50 flex items-center justify-center">
+//               {brouchreUrl ? (
+//                 //Show brochure PDF
+//                 // <embed
+//                 //   src={brouchreUrl}
+//                 //   type="application/pdf"
+//                 //   className="w-full h-full rounded"
+//                 //   />
+//                 <Document file={brouchreUrl}>
+//                   <Page pageNumber={1} width={600} />
+//                 </Document>
+
+//               ) : (
+//                 // Show "No brochure" message
+//                 <div className="text-center text-gray-600">
+//                   <div className="text-4xl mb-4">📄</div>
+//                   <p className="text-lg font-medium mb-2">No brochure available</p>
+//                   <p className="text-xs mt-2 text-gray-500">
+//                     Please check back later.
+//                   </p>
+//                 </div>
+//               )}
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default Navbar;
+
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleModal = () => setShowModal(!showModal);
-  const brouchreUrl = "/broucher.pdf";
+  const navigate = useNavigate();
 
   const handleNavClick = (href) => {
     setIsOpen(false);
@@ -342,12 +482,16 @@ const Navbar = () => {
     }
   };
 
+  const handleLogin = () => {
+    navigate('/login');
+  };
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-1.5 bg-white bg-opacity-50 backdrop-blur-md text-black shadow-sm">
         <div className="flex items-center space-x-2">
           <a href="#home">
-          <img src="./logo.png" alt="vinsup skill accademy" className="h-25 w-44"/>
+            <img src="./logo.png" alt="vinsup skill accademy" className="h-25 w-44"/>
           </a>
         </div>
         <div className="hidden md:flex flex-1 justify-center">
@@ -370,24 +514,24 @@ const Navbar = () => {
             <li className="hover:text-blue-500 cursor-pointer transition-colors duration-200">
               <button onClick={() => handleNavClick('#process')}>Process</button>
             </li>
+            <li>
+              <button
+                onClick={handleLogin}
+                className="ml-4 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-1 rounded-full text-base font-medium transition duration-200"
+              >
+                Login
+              </button>
+            </li>
           </ul>
         </div>
         <div className="md:hidden">
           <button 
-            onClick={toggleMenu} 
+            onClick={() => setIsOpen(!isOpen)}
             className="text-black text-2xl p-2 hover:bg-black hover:bg-opacity-10 rounded transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
             {isOpen ? '✕' : '☰'}
           </button>
-        </div>
-        <div className="hidden md:block">
-          {/* <button
-            onClick={toggleModal}
-            className="border border-gray-400 text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition duration-200"
-          >
-            Get Brochure
-          </button> */}
         </div>
       </nav>
       {isOpen && (
@@ -397,7 +541,7 @@ const Navbar = () => {
               <button onClick={() => handleNavClick('#home')} className="hover:text-blue-500 transition-colors duration-200">Home</button>
             </li>
             <li>
-              <button onClick={() => handleNavClick('#aboutus')} className="hover:text-blue-500 transition-colors duration-200">About Us</button>   
+              <button onClick={() => handleNavClick('#aboutus')} className="hover:text-blue-500 transition-colors duration-200">About Us</button>
             </li>
             <li>
               <button onClick={() => handleNavClick('#whyus')} className="hover:text-blue-500 transition-colors duration-200">Why Us</button>
@@ -412,53 +556,17 @@ const Navbar = () => {
               <button onClick={() => handleNavClick('#process')} className="hover:text-blue-500 transition-colors duration-200">Process</button>
             </li>
             <li>
-              {/* <button
+              <button 
                 onClick={() => {
-                  toggleModal();
+                  handleLogin();
                   setIsOpen(false);
                 }}
-                className="mt-2 w-full max-w-xs border border-gray-400 text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition duration-200"
+                className="w-full max-w-xs border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-1 rounded-full text-base font-medium transition duration-200"
               >
-                Get Brochure
-              </button> */}
+                Login
+              </button>
             </li>
           </ul>
-        </div>
-      )}
-      {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-          <div className="relative bg-white w-11/12 md:w-3/4 max-w-4xl h-[80vh] p-4 rounded-lg shadow-lg">
-            <button
-              onClick={toggleModal}
-              className="absolute top-2 right-4 text-black text-xl hover:bg-gray-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200"
-              aria-label="Close modal"
-            >
-              ✕
-            </button>
-            <div className="w-full h-full border border-gray-200 rounded bg-gray-50 flex items-center justify-center">
-              {brouchreUrl ? (
-                //Show brochure PDF
-                // <embed
-                //   src={brouchreUrl}
-                //   type="application/pdf"
-                //   className="w-full h-full rounded"
-                //   />
-                <Document file={brouchreUrl}>
-                  <Page pageNumber={1} width={600} />
-                </Document>
-
-              ) : (
-                // Show "No brochure" message
-                <div className="text-center text-gray-600">
-                  <div className="text-4xl mb-4">📄</div>
-                  <p className="text-lg font-medium mb-2">No brochure available</p>
-                  <p className="text-xs mt-2 text-gray-500">
-                    Please check back later.
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
         </div>
       )}
     </>
